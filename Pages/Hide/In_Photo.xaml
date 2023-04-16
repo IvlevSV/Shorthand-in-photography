@@ -1,0 +1,45 @@
+﻿<Page x:Class="Курсовая_работа_сокрытие_информации.Pages.Hide.In_Photo"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Курсовая_работа_сокрытие_информации.Pages.Hide"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="800"
+      Title="In_Photo">
+    <Grid>
+        <Grid Width="40" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" >
+            <Button  Style="{DynamicResource RoundButton}" Content="×" HorizontalAlignment="Center" VerticalAlignment="Center" Width="25" Height="25" FontSize="20" FontWeight="Normal" FontStyle="Normal" HorizontalContentAlignment="Center" VerticalContentAlignment="Top" Click="Exit" FontFamily="Sitka Small">
+                <Button.BorderBrush>
+                    <SolidColorBrush Color="#FF707070" Opacity="0.1"/>
+                </Button.BorderBrush>
+                <Button.Background>
+                    <SolidColorBrush Color="#FF508268" Opacity="0"/>
+                </Button.Background>
+            </Button>
+        </Grid>
+        <Grid Width="40" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" >
+            <Button  Style="{DynamicResource RoundButton}" Content="🠐" HorizontalAlignment="Center" VerticalAlignment="Center" Width="25" Height="25" FontSize="20" FontWeight="Normal" FontStyle="Normal" HorizontalContentAlignment="Center" VerticalContentAlignment="Top" Click="Go_Back" FontFamily="Sitka Small">
+                <Button.BorderBrush>
+                    <SolidColorBrush Color="#FF707070" Opacity="0.1"/>
+                </Button.BorderBrush>
+                <Button.Background>
+                    <SolidColorBrush Color="#FF508268" Opacity="0"/>
+                </Button.Background>
+            </Button>
+        </Grid>
+        <Image x:Name="InPhoto" HorizontalAlignment="Left" Margin="35,35,0,0" VerticalAlignment="Top" Width="265" Height="260" Stretch="Uniform" />
+        <Image x:Name="OutPhoto" HorizontalAlignment="Left" Height="260" Margin="531,38,0,0" VerticalAlignment="Top" Width="268" Stretch="Uniform"/>
+        <Button Style="{DynamicResource RoundButton}" Click="Input_Photo" Content="Загрузить фотографию" HorizontalAlignment="Center" Height="50" VerticalAlignment="Top" Width="198" Background="#FF508268" Margin="0,43,0,0"/>
+        <Button Style="{DynamicResource RoundButton}" Click="Input_Information" Content="Поместить информацию" HorizontalAlignment="Center" Height="50" VerticalAlignment="Top" Width="198" Background="#FF508268" Margin="0,98,0,0"/>
+        <Button Style="{DynamicResource RoundButton}" Click="Download" Content="Сохранить изображение" HorizontalAlignment="Center" Height="50" VerticalAlignment="Top" Width="198" Background="#FF508268" Margin="0,153,0,0"/>
+        <TextBox x:Name="TextBlock" SpellCheck.IsEnabled="True" HorizontalAlignment="Center" Height="125" Margin="0,306,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="778" BorderBrush="#FF404861" FontWeight="Bold" FontSize="16" SelectionBrush="#FF000200" Visibility="Visible" TextChanged="TextBlock_TextChanged">
+            <TextBox.Background>
+                <SolidColorBrush Color="#FF508268" Opacity="0.7"/>
+            </TextBox.Background>
+        </TextBox>
+        <Border HorizontalAlignment="Center" Height="67" Margin="0,225,0,0" Width="198" VerticalAlignment="Top" BorderThickness="1"  BorderBrush="Black">
+            <TextBlock x:Name="CountChar" HorizontalAlignment="Center" Height="67" Margin="0,0,0,0" Width="198" VerticalAlignment="Top" TextWrapping="Wrap" Background="Transparent"  FontWeight="Bold" FontSize="16" />
+        </Border>
+    </Grid>
+</Page>
